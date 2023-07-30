@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FreshBites</string>
+    <string name="app_name_test">test</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_activity_recipe">RecipeActivity</string>
+    <string name="tab_text_1">Overview</string>
+    <string name="tab_text_2">Ingredients</string>
+    <string name="tab_text_3">Instructions</string>
+</resources>

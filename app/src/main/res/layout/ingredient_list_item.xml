@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ingredient_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#CF7C7C"
+    android:backgroundTintMode="src_over"
+    android:paddingTop="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/IngredientCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#AC8383"
+        android:clickable="true"
+        android:onClick="cheeck"
+        app:cardBackgroundColor="#6FD874"
+        app:cardCornerRadius="13dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CheckBox
+            android:id="@+id/ingredientCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
