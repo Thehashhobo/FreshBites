@@ -40,8 +40,7 @@ class MyIngredientRecyclerViewAdapter(private val ingredients: List<IngredientDa
         holder.binding.IngredientCard.setOnClickListener {
             checkerOnClick(it as CardView)
         }
-        holder.binding.ingredientCheckBox.text = item.name
-        holder.binding.ingredientCheckBox.isChecked = checked
+        holder.binding.ingredientItemText.text = item.name
         if (checked)
         {
             holder.binding.IngredientCard.setCardBackgroundColor(
