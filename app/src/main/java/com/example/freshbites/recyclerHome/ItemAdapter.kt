@@ -1,5 +1,6 @@
 package com.example.freshbites.recyclerHome
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -8,6 +9,7 @@ import com.example.freshbites.databinding.ItemCardBinding
 import com.example.freshbites.databinding.ItemRecyclerBinding
 import com.example.freshbites.databinding.ItemTextBinding
 import com.example.freshbites.R
+import com.example.freshbites.RecipeActivity
 import com.example.freshbites.recyclerHome.subRecyclers.RecipeCardAdapter
 
 
@@ -59,10 +61,15 @@ class ItemAdapter(var items: List<Items>) : RecyclerView.Adapter<ItemViewHolder>
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = items[position]
         if (item is Items.CardItem && holder is ItemViewHolder.CardViewHolder) {
-            holder.binding.recipeCardTextTitle.text = item.title
+            holder.binding.recipeCardTextTitle.text = item.cardData.title
             holder.binding.recipeActualImage.setBackgroundResource(R.drawable.test_image2)
-            holder.binding.recipeCardTextTime.text = item.time
-            holder.binding.recipeCardRatingBar.rating = item.rating
+            holder.binding.recipeCardTextTime.text = item.cardData.time
+            holder.binding.recipeCardRatingBar.rating = item.cardData.rating
+            val intent = Intent(holder.binding.root.context, RecipeActivity::class.java)
+            val item = items[position] as Items.CardItem
+            val recipeCardData = item.cardData
+            intent.putExtra("passed_data", recipeCardData)
+            holder.binding.button2.setOnClickListener {holder.binding.root.context.startActivity(intent)}
 
         } else if (item is Items.TextItem && holder is ItemViewHolder.TextViewHolder) {
             holder.binding.itemTV.text = item.title

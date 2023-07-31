@@ -19,6 +19,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Transparent" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/RelativeLayout1"
             android:layout_width="match_parent"
@@ -84,7 +90,9 @@
                 android:id="@+id/recipeCardTextTitle"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="5dp"
                 android:autoSizeTextType="uniform"
                 android:fontFamily="@font/playfair_display_bold"
                 android:paddingStart="4dp"
@@ -92,8 +100,7 @@
                 android:text="Hello"
                 android:textColor="#FFFFFF"
                 android:textColorHighlight="#805656"
-                android:textSize="26sp"
-                android:translationY="-8dp"
+                android:textSize="27sp"
                 android:translationZ="90dp"
                 app:layout_constraintBottom_toTopOf="@+id/recipeCardRatingBar"
                 app:layout_constraintEnd_toEndOf="parent"

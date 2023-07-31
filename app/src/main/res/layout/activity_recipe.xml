@@ -41,7 +41,8 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|end"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="-24dp"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
         android:icon="@drawable/ic_home_black_24dp"
@@ -49,4 +50,5 @@
         android:translationX="5dp"
         android:translationY="25dp"
         app:backgroundTint="#D61D1D" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.freshbites.R
 import com.example.freshbites.RecipeActivity
 import com.example.freshbites.databinding.RecipeCardBinding
+import com.example.freshbites.recyclerHome.Items
 
 
 class RecipeCardAdapter(var cards: List<RecipeCardData>)
@@ -16,6 +17,12 @@ class RecipeCardAdapter(var cards: List<RecipeCardData>)
 
     interface OnItemClickListener{
         fun onItemClick(position: Int)
+    }
+
+    @JvmName("setCardsList")
+    fun setCards(newCards: List<RecipeCardData>) {
+        cards = newCards
+        notifyDataSetChanged() // Notify the adapter that the dataset has changed
     }
 
     fun setOnItemClickListener(listener: OnItemClickListener){

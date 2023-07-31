@@ -19,7 +19,8 @@ import com.google.android.material.snackbar.Snackbar
 class IngredientsFragment : Fragment() {
     private var _binding: TabIngredientsFragmentBinding? = null
     private val binding get() = _binding!!
-    fun sortByStatus(ingredients: List<IngredientData>): List<IngredientData> {
+
+    private fun sortByStatus(ingredients: List<IngredientData>): List<IngredientData> {
         return ingredients.sortedWith(compareBy({ !it.checked }, { it.name }))
     }
     private fun checkerOnclick(view: CardView){

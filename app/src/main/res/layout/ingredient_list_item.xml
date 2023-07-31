@@ -7,6 +7,7 @@
     android:layout_height="wrap_content"
     android:backgroundTint="#CF7C7C"
     android:backgroundTintMode="src_over"
+    android:foregroundTint="#A68A8A"
     android:paddingTop="10dp">
 
     <androidx.cardview.widget.CardView
@@ -23,10 +24,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <CheckBox
-            android:id="@+id/ingredientCheckBox"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/ingredient_item_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:paddingStart="13dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:text="TextView"
+            android:textColor="#201E1E"
+            android:textSize="24sp" />
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
